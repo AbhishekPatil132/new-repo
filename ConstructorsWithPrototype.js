@@ -13,4 +13,4 @@ Apple.prototype = {
 var apple1 = new Apple("red",200,"eat");
 console.log(apple1.eat);
 var apple2 = new Apple("brown", 150, "eat");
-console.log(apple2.eat);
+console.log(apple.eat);
