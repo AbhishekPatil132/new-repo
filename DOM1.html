@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM manupulation</title>
+    </head>
+    <body>
+        <div>
+            <h1 id="1">
+                HELLO WORLD !!
+            </h1>
+        </div>
+        <div>
+            <p id="2">Abhishek Patil</p>
+        </div>
+
+        <script type="text/javascript">
+             /*
+               var dom = document.getElementById('1');
+               dom.innerText += "I LOVE Web Development";
+
+               var domm = document.getElementById('2');
+               domm.innerHTML += "<span><p> BTech in IT </p></span>";
+            */
+            var dom = document.getElementById('1');
+               dom.outerHTML = "<h1>I LOVE Web D</h1>";
+        </script>
+    </body>
+</html>
