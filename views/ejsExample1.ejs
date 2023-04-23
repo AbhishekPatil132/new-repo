@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EJS Example</title>
+    </head>
+    <body>
+        <%- include ('Navbar');%>
+        <h3>Welcome <%= user.name%></h3>
+        <h2>Hope you are having a good stay in <%= user.city %> city</h2>
+        <h1>How can we serve you ?</h1> 
+        <h3>Here is the menu for Breakfast </h3>
+        <h2>
+            <ul>
+                <% user.menu.forEach((item)=>{ %>
+                   <li> <%= item %></li>
+                <% }) %>
+            </ul>
+        </h2>
+    </body>
+</html>
