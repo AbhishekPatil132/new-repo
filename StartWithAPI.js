@@ -22,4 +22,28 @@ app.post('/', async (req, res)=>{
     }
 })
 
+// if want to update other than name 
+//app.put('/', async (req, res)=>{
+//    let result = await dbConnect();
+//    let data = await result.updateOne(
+//        { Name: "Jayesh"},
+//        { $set: { Name: "JAYESH"}}
+//    )
+
+
+// if want to update name also
+// then send original name through parameter then updates will take place
+app.put('/:name', async (req, res)=>{
+        let result = await dbConnect();
+        let data = await result.updateOne(
+            { Name: req.params.name},
+            { $set: req.body}
+        )
+
+    if(data.modifiedCount > 0){
+        console.log("Updated....");
+    }
+    res.send(data);
+})
+
 app.listen(2000)
