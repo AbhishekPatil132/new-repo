@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 
 const productSchema = new mongoose.Schema({
     Name: String,
-    Brand: String,
-    Price: Number
+    Branch: String,
+    Rollno: Number
 });
 
-module.exports = mongoose.model('products', productSchema);
+module.exports = mongoose.model('coll1', productSchema);
